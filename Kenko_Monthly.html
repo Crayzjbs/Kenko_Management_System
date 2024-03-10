@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenko Fitness Management System</title>
+    <link rel="stylesheet" href="Kenko_Monthly.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kenko Fitness Management System</h1>
+    </header>
+    <main>
+      <div class="Monthly_forms">
+        <h1>MONTHLY</h1>
+        <form action="insert_data.php" method="POST">
+          <div class="Monthly_Name">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="Monthly_Category">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+              <option value="member">Member</option>
+              <option value="student">Student</option>
+              <option value="regular">Regular</option>
+            </select>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+            <label for="contact">Contact:</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Enter your Phone number"
+              required
+            />
+          </div>
+          <div class="Monthly_Address">
+            <label for="blk">Blk/Street/Lot:</label>
+            <input
+              type="text"
+              id="blk"
+              name="blk"
+              placeholder="Enter your Blk/Street/Lot"
+              required
+            />
+            <label for="barangay">Barangay:</label>
+            <input
+              type="text"
+              id="barangay"
+              name="barangay"
+              placeholder="Enter your Barangay"
+              required
+            />
+            <label for="city">City:</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Enter your City"
+              required
+            />
+          </div>
+          <div class="Monthly_Programs">
+            <label>Select Program:</label>
+            <div class="checkbox-container">
+              <div>
+                <input
+                  type="radio"
+                  id="gym"
+                  name="program"
+                  value="gym"
+                  required
+                />
+                <label for="gym">Gym</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="boxing"
+                  name="program"
+                  value="boxing"
+                  required
+                />
+                <label for="boxing">Boxing</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="muay-thai"
+                  name="program"
+                  value="muay-thai"
+                  required
+                />
+                <label for="muay-thai">Muay Thai</label>
+              </div>
+            </div>
+          </div>
+          <div class="Monthly_SignUpDate">
+            <label for="sign-up">Sign Up Date:</label>
+            <input
+              type="date"
+              id="sign-up"
+              name="sign-up"
+              placeholder="Enter Date of Sign up"
+              required
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div>
+          <button type="button" onclick="navigateToRate()">Next</button>
+          <button onclick="window.location.href = 'Kenko_home.html';">
+            Return
+          </button>
+        </div>
+      </div>
+    </main>
+    <script>
+      function navigateToRate() {
+        const programSelect = document.querySelector(
+          'input[name="program"]:checked'
+        );
+
+        if (programSelect) {
+          const selectedProgram = programSelect.value;
+
+          if (selectedProgram === "gym") {
+            window.location.href = `Kenko_Gym.html?program=${selectedProgram}`;
+          } else if (selectedProgram === "boxing") {
+            window.location.href = `Kenko_Boxing.html?program=${selectedProgram}`;
+          } else if (selectedProgram === "muay-thai") {
+            window.location.href = `Kenko_MuayThai.html?program=${selectedProgram}`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

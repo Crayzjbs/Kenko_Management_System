@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sessionStyles.css" />
+    <script src="Main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Kenko Fitness Management System</h1>
+      </div>
+    </header>
+    <div class="Session_homepage">
+      <h1>Session</h1>
+      <div class="Session_UserInputs">
+        <h2>Program</h2>
+        <div class="Session_Program-Option">
+          <label> <input type="checkbox" value="gym" /> Gym </label>
+          <label> <input type="checkbox" value="boxing" /> Boxing </label>
+          <label> <input type="checkbox" value="muay-thai" /> Muay Thai </label>
+        </div>
+        <div class="Session_Name">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="Session_Category">
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="member">Member</option>
+            <option value="student">Student</option>
+            <option value="regular">Regular</option>
+          </select>
+          <div class="buttons">
+            <button type="submit">Submit</button>
+            <button onclick="window.location.href = 'Kenko_home.html';">
+              Return
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
