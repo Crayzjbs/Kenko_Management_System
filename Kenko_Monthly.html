@@ -117,7 +117,6 @@
               required
             />
           </div>
-          <button type="submit">Submit</button>
         </form>
         <div>
           <button type="button" onclick="navigateToRate()">Next</button>
@@ -135,13 +134,22 @@
 
         if (programSelect) {
           const selectedProgram = programSelect.value;
+          const name = document.getElementById("name").value;
+          const category = document.getElementById("category").value;
+          const gender = document.getElementById("gender").value;
+          const contact = document.getElementById("contact").value;
+          const blk = document.getElementById("blk").value;
+          const barangay = document.getElementById("barangay").value;
+          const city = document.getElementById("city").value;
+          const signUpDate = document.getElementById("sign-up").value;
 
+          // Redirect to the appropriate rate page with additional data in the URL
           if (selectedProgram === "gym") {
-            window.location.href = `Kenko_Gym.html?program=${selectedProgram}`;
+            window.location.href = `Kenko_Gym.html?name=${name}&category=${category}&gender=${gender}&contact=${contact}&blk=${blk}&barangay=${barangay}&city=${city}&signUpDate=${signUpDate}`;
           } else if (selectedProgram === "boxing") {
-            window.location.href = `Kenko_Boxing.html?program=${selectedProgram}`;
+            window.location.href = `Kenko_Boxing.html?name=${name}&category=${category}&gender=${gender}&contact=${contact}&blk=${blk}&barangay=${barangay}&city=${city}&signUpDate=${signUpDate}`;
           } else if (selectedProgram === "muay-thai") {
-            window.location.href = `Kenko_MuayThai.html?program=${selectedProgram}`;
+            window.location.href = `Kenko_MuayThai.html?name=${name}&category=${category}&gender=${gender}&contact=${contact}&blk=${blk}&barangay=${barangay}&city=${city}&signUpDate=${signUpDate}`;
           }
         }
       }

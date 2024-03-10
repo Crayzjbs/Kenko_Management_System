@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,8 +9,44 @@
     <header>
       <h1>Kenko Fitness Management System</h1>
     </header>
-    <div>
-      <h1>Gym</h1>
+
+    <div class="pricing-columns">
+      <div class="column">
+        <div class="GymRate_name">
+          <h1>GYM RATES</h1>
+        </div>
+        <h2>STANDARD</h2>
+
+        <button>1 Month</button>
+        <button>3 Months</button>
+        <button>6 Months</button>
+      </div>
+      <div class="column">
+        <h2>MEMBER</h2>
+
+        <button>1 Month</button>
+        <button>3 Months</button>
+        <button>6 Months</button>
+      </div>
+      <div class="column">
+        <h2>STUDENT</h2>
+
+        <button>1 Month</button>
+        <button>3 Months</button>
+        <button>6 Months</button>
+      </div>
     </div>
+
+    <form action="insert_data.php" method="POST">
+      <input
+        type="hidden"
+        name="program"
+        value="<?php echo $_GET['program']; ?>"
+      />
+      <div class="Rate_buttons">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <button onclick="window.location.href = 'Kenko_home.html';">Return</button>
   </body>
 </html>
