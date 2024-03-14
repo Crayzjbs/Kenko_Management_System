@@ -1,12 +1,12 @@
 <?php
 // Database credentials
 $servername = "localhost";
-$username = "your_username";
+$username = "root";
 $password = "your_password";
-$dbname = "your_database";
+$dbname = "kenko_system_database";
 
 // Establishing a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli('localhost', 'root', '', 'Kenko_system_database');
 
 // Check connection
 if ($conn->connect_error) {
