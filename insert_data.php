@@ -25,6 +25,36 @@ $program = $_POST['program'];
 $signUpDate = $_POST['sign-up'];
 $chosenPackage = $_GET['program'];
 
+
+
+// --- Member ---
+//note(post)
+//status(get)
+//Category(get)[Student,Non-Student]
+
+
+// --- Session ---
+//time-in(post)
+//time-out(post)
+//session-date(post)
+
+
+/// -- Package ---
+//package-name(get)
+//package-duration(post)
+//package-rate(get)
+//package-program(get)
+//package-type(get)
+
+
+// --- Transaction ---
+//payment-type(get)
+//payment-total(post)
+//transaction-date(post)
+
+
+
+
 // Prepare and bind SQL statement
 $stmt = $conn->prepare("INSERT INTO your_table_name (name, category, gender, contact, blk, barangay, city, program, sign_up_date, chosen_package) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssssssss", $name, $category, $gender, $contact, $blk, $barangay, $city, $program, $signUpDate, $chosenPackage);
